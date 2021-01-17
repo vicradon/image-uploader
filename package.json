@@ -1,13 +1,14 @@
 {
-  "name": "trivial",
+  "name": "uploady",
   "version": "0.0.1",
   "adonis-version": "4.1.0",
-  "description": "Multiplayer Tic-Tac-Toe using websockets and AdonisJS",
+  "description": "Secure image uploads",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test": "node ace test",
-    "watch": "./node_modules/.bin/webpack --mode development --watch"
+    "watch": "./node_modules/.bin/webpack --mode development --watch",
+    "prod": "ENV_SILENT=true node server.js"
   },
   "keywords": [
     "adonisjs",
@@ -35,8 +36,7 @@
     "@azure/storage-blob": "^12.4.0",
     "alpinejs": "^2.8.0",
     "axios": "^0.21.1",
-    "nanoid": "^3.1.20",
-    "sqlite3": "^5.0.0"
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
