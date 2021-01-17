@@ -5,10 +5,9 @@
   "description": "Secure image uploads",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "ENV_SILENT=true node server.js",
     "test": "node ace test",
-    "watch": "./node_modules/.bin/webpack --mode development --watch",
-    "prod": "ENV_SILENT=true node server.js"
+    "watch": "./node_modules/.bin/webpack --mode development --watch"
   },
   "keywords": [
     "adonisjs",
