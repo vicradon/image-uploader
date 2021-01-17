@@ -4,3 +4,12 @@
 .invisible {
   visibility: hidden;
 }
+.home-background {
+  background-image: url("../images/home-background.jpg");
+  background-color: #cccccc;
+  width: 100vw;
+  height: 60vh;
+
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}

@@ -17,6 +17,22 @@
 const Route = use("Route");
 
 Route.get("/", "HomeController.index").as("home");
-Route.post("/", "QuizController.initializeQuiz");
-Route.get("/quiz", "QuizController.index").as("quiz");
-Route.post("/quiz/end", "QuizController.endQuiz").as("quiz-end");
+
+Route.group(function () {
+  Route.post("login", "AuthController.login");
+  Route.get("login", "AuthController.loginView");
+  Route.post("signup", "AuthController.signup");
+  Route.get("signup", "AuthController.signupView");
+  Route.post("logout", "AuthController.logout");
+}).prefix("auth");
+
+Route.group(function () {
+  Route.get("", "ImageController.index");
+  Route.get("/upload", "ImageController.uploadView");
+  Route.post("/upload", "ImageController.upload");
+})
+  .prefix("images")
+  .middleware(["auth"]);
+
+Route.get("404", "ErrorController.404");
+Route.get("401", "ErrorController.401");
