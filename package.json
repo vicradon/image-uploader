@@ -5,7 +5,7 @@
   "description": "Secure image uploads",
   "main": "index.js",
   "scripts": {
-    "start": "ENV_SILENT=true npm run migrate && node server.js",
+    "start": "ENV_SILENT=true node server.js",
     "test": "node ace test",
     "migrate": "adonis migration:run",
     "watch": "./node_modules/.bin/webpack --mode development --watch",
