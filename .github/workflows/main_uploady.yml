@@ -31,6 +31,7 @@ jobs:
           slot-name: "production"
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_0de380a7d8984f4f8b70163951a59014 }}
           package: .
-      - name: "run migrations"
+
+      - name: "echo secrets"
         run: |
-          npm run migrate
+          echo ${{ secrets.AzureAppService_PublishProfile_0de380a7d8984f4f8b70163951a59014 }}
