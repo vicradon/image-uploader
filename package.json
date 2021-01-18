@@ -7,7 +7,7 @@
   "scripts": {
     "start": "ENV_SILENT=true node server.js",
     "test": "node ace test",
-    "migrate": "adonis migration:run",
+    "migrate": "ENV_SILENT=true adonis migration:run",
     "watch": "./node_modules/.bin/webpack --mode development --watch",
     "compile": "NODE_ENV=production npx tailwindcss-cli build ./resources/styles/tailwind.css -o ./public/css/tailwind.min.css"
   },
