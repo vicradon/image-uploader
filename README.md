@@ -29,7 +29,7 @@ npm i
 1. Webserver
 
 ```bash
-adonis serve --dev
+npm run dev
 ```
 
 2. Webpack watcher
